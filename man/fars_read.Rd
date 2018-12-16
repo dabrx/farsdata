@@ -15,9 +15,3 @@ the contents of the file as a tibble.
 \description{
 Read the file and convert it to a tibble.
 }
-\examples{
-\\notrun{
-fars_read("accident_2013.csv.bz2")
-}
-
-}

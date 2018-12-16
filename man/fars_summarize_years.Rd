@@ -17,9 +17,3 @@ Read the data for some years and generates
 a table containing the monthly totals for
 each year.
 }
-\examples{
-\\notrun{
-fars_summarize_years(c(2013, 2014, 2015))
-}
-
-}

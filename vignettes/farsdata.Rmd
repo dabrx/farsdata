@@ -4,7 +4,7 @@ author: "Damian Brunold"
 date: "`r Sys.Date()`"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteIndexEntry{FARS data reading and plotting}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -16,20 +16,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-You can read FARS data files for a series of years using the `fars_read_years` function:
+You can read FARS data files for a series of years using the `fars_read_years` function.
 
-```{r, eval=FALSE}
-fars_read_years(c(2013, 2014, 2015))
-```
+If you want to summarize FARS data, use the `fars_summarize_years` function.
 
-If you want to summarize FARS data, use the `fars_summarize_years` function:
-
-```{r, eval = FALSE}
-fars_summarize_years(c(2013, 2014, 2015))
-```
-
-If you want to plot the FARS data for a given US state, use the `fars_map_state` function:
-
-```{r, eval = FALSE}
-fars_map_state(1, 2013)
-```
+If you want to plot the FARS data for a given US state, use the `fars_map_state` function.

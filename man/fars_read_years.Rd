@@ -19,9 +19,3 @@ Successively read the accidents files for each
 year provided and collects the tibbles in a list.
 Each tibble contains only year and month columns.
 }
-\examples{
-\\notrun{
-fars_read_years(c(2013, 2014))
-}
-
-}

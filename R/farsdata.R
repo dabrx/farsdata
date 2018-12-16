@@ -5,11 +5,6 @@
 #' @param filename the filename of the file as a string.
 #' @return the contents of the file as a tibble.
 #'
-#' @examples
-#' \notrun{
-#' fars_read("accident_2013.csv.bz2")
-#' }
-#'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
 #'
@@ -34,9 +29,6 @@ fars_read <- function(filename) {
 #'    an integer.
 #' @return the constructed filename as a string.
 #'
-#' @examples
-#' make_filename(2013)
-#'
 make_filename <- function(year) {
   year <- as.integer(year)
   sprintf("accident_%d.csv.bz2", year)
@@ -54,11 +46,6 @@ make_filename <- function(year) {
 #'   MONTH and year. If the file does not exist or does not have
 #'   the correct data, then a warning is emitted and NULL returned.
 #'
-#' @examples
-#' \notrun{
-#' fars_read_years(c(2013, 2014))
-#' }
-#'
 #' @importFrom dplyr mutate
 #' @importFrom magrittr %>%
 #' @importFrom dplyr select
@@ -70,7 +57,7 @@ fars_read_years <- function(years) {
     tryCatch({
       dat <- fars_read(file)
       dplyr::mutate(dat, year = year) %>%
-        dplyr::select(MONTH, year)
+        dplyr::select("MONTH", year)
     }, error = function(e) {
       warning("invalid year: ", year)
       return(NULL)
@@ -87,11 +74,6 @@ fars_read_years <- function(years) {
 #'
 #' @param years the list of integer years to read.
 #' @return a tibble containing the monthly totals for each year.
-#'
-#' @examples
-#' \notrun{
-#' fars_summarize_years(c(2013, 2014, 2015))
-#' }
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom magrittr %>%
@@ -116,11 +98,6 @@ fars_summarize_years <- function(years) {
 #'
 #' @param state.num the numerical identifier of the state to plot.
 #' @param year the year to process and display.
-#'
-#' @examples
-#' \notrun{
-#' fars_map_state(1, 2013)
-#' }
 #'
 #' @importFrom dplyr filter
 #' @importFrom maps map

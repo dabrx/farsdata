@@ -15,9 +15,3 @@ fars_map_state(state.num, year)
 Plot a map of a state with points for each
 case of the given year.
 }
-\examples{
-\\notrun{
-fars_map_state(1, 2013)
-}
-
-}

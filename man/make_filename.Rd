@@ -18,7 +18,3 @@ the constructed filename as a string.
 Construct the filename of the accidents data
 file in csv.bz2 format for the given year.
 }
-\examples{
-make_filename(2013)
-
-}
