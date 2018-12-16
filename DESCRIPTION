@@ -6,7 +6,7 @@ Author: Who wrote it
 Maintainer: Damian Brunold <dab@dabsoft.ch>
 Description: Read FARS files for a series of years.
     Plot FARS data for a given US state.
-License: GPLv3
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
