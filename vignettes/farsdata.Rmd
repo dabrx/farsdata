@@ -14,31 +14,22 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-datadir = system.file("extdata", package = "farsdata")
 ```
 
 You can read FARS data files for a series of years using the `fars_read_years` function:
 
-```{r}
-oldwd = setwd(datadir)
-data <- fars_read_years(c(2013, 2014, 2015))
-setwd(oldwd)
-data
+```{r, eval=FALSE}
+fars_read_years(c(2013, 2014, 2015))
 ```
 
 If you want to summarize FARS data, use the `fars_summarize_years` function:
 
-```{r}
-oldwd = setwd(datadir)
-data <- fars_summarize_years(c(2013, 2014, 2015))
-setwd(oldwd)
-data
+```{r, eval = FALSE}
+fars_summarize_years(c(2013, 2014, 2015))
 ```
 
 If you want to plot the FARS data for a given US state, use the `fars_map_state` function:
 
-```{r}
-oldwd = setwd(datadir)
+```{r, eval = FALSE}
 fars_map_state(1, 2013)
-setwd(oldwd)
 ```

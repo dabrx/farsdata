@@ -13,10 +13,11 @@ fars_read(filename)
 the contents of the file as a tibble.
 }
 \description{
-Read the file using the \code{\link{readr::read_csv}} function
-and convert it to a tibble using \code{\link{dplyr::tbl_df}}.
+Read the file and convert it to a tibble.
 }
 \examples{
+\\notrun{
 fars_read("accident_2013.csv.bz2")
+}
 
 }

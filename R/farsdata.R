@@ -1,13 +1,14 @@
 #' Read the FARS data.
 #'
-#' Read the file using the \code{\link{readr::read_csv}} function
-#' and convert it to a tibble using \code{\link{dplyr::tbl_df}}.
+#' Read the file and convert it to a tibble.
 #'
 #' @param filename the filename of the file as a string.
 #' @return the contents of the file as a tibble.
 #'
 #' @examples
+#' \notrun{
 #' fars_read("accident_2013.csv.bz2")
+#' }
 #'
 #' @importFrom readr read_csv
 #' @importFrom dplyr tbl_df
@@ -54,7 +55,9 @@ make_filename <- function(year) {
 #'   the correct data, then a warning is emitted and NULL returned.
 #'
 #' @examples
+#' \notrun{
 #' fars_read_years(c(2013, 2014))
+#' }
 #'
 #' @importFrom dplyr mutate
 #' @importFrom magrittr %>%
@@ -86,7 +89,9 @@ fars_read_years <- function(years) {
 #' @return a tibble containing the monthly totals for each year.
 #'
 #' @examples
+#' \notrun{
 #' fars_summarize_years(c(2013, 2014, 2015))
+#' }
 #'
 #' @importFrom dplyr bind_rows
 #' @importFrom magrittr %>%
@@ -113,7 +118,9 @@ fars_summarize_years <- function(years) {
 #' @param year the year to process and display.
 #'
 #' @examples
+#' \notrun{
 #' fars_map_state(1, 2013)
+#' }
 #'
 #' @importFrom dplyr filter
 #' @importFrom maps map
